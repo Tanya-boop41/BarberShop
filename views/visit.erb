@@ -27,9 +27,9 @@
   	<label>Выберите парикмахера</label>
   	<select name="barber" class="form-control">
   	<option selected value="Выберите парикмахера">Выберите парикмахера...</option>
-  	<option value="Уолтер Вайт">Уолтер Вайт</option>
-  	<option value="Джесси Пинкман">Джесси Пинкман</option>
-  	<option value="Гус Фринг">Гус Фринг</option>
+  	<option value="Уолтер Вайт" <%= @barber == 'Уолтер Вайт' ? 'selected' : ''%>>Уолтер Вайт</option>
+  	<option value="Джесси Пинкман" <%= @barber == 'Джесси Пинкман' ? 'selected' : ''%>>Джесси Пинкман</option>
+  	<option value="Гус Фринг" <%= @barber == 'Гус Фринг' ? 'selected' : ''%>>Гус Фринг</option>
 </select>
 </div>
 
