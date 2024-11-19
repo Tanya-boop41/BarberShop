@@ -120,7 +120,8 @@ post '/admin' do
 	@password = params[:password]
 
 	if @login == 'admin' && @password == 'secret'
-		@user_file = File.open('./public/users.txt', 'r')
+		db = get_db 		
+		@results = db.execute 'SELECT * FROM Users ORDER BY id DESC' 
 		erb :users
 	else
 		erb 'Некорректные логин или пароль'
